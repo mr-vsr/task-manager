@@ -70,19 +70,19 @@ export const addTask = (task, id) => async (dispatch) => {
 	}
 };
 
-export const getAllTasks = (token, id) => async (dispatch) => {
+export const getAllTasks = (token) => async (dispatch) => {
 	const config = {
 		headers: {
 			Authorization: `Bearer ${token}`,
 		},
-		params: {
-			id,
-		},
+		// params: {
+		// 	id,
+		// },
 	};
 
 	try {
 		const response = await axios.get(
-			'http://localhost:4000/task/tasks',
+			`http://localhost:4000/task/tasks`,
 			config
 		);
 

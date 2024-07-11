@@ -17,6 +17,7 @@ const TaskList = () => {
 		dispatch(getAllTasks(currentUser.token, currentUser.id));
 	}, [dispatch, currentUser.token, currentUser.id]);
 
+
 	return (
 		<div>
 			<ul className='list-header'>

@@ -12,6 +12,7 @@ const Dashboard = () => {
 
 	let pendingTask = [];
 	let completedTask = [];
+
 	for (let i = 0; i < AllTasks.length; i++) {
 		if (AllTasks[i].status === 'todo') {
 			pendingTask.push(AllTasks[i]);

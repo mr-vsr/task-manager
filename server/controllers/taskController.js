@@ -21,12 +21,13 @@ const addTask = async (req, res) => {
 const getAllTasks = async (req, res) => {
 	const { id } = req.query;
 	try {
-		let tasklist = await Task.find({ cretedBy: id });
+		let tasklist = await Task.find({ createdBy:id});
 		return res.status(200).send(tasklist);
 	} catch (error) {
 		return res.status(400).send(error);
 	}
 };
+
 
 const editTask = async (req, res) => {};
 
