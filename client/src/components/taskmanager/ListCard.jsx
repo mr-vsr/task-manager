@@ -29,6 +29,9 @@ const ListCard = (items) => {
 					<p>{item.status}</p>
 				</li>
 				<li>
+					<p>Created At: {new Date(item.createdAt).toLocaleString()}</p>
+				</li>
+				<li>
 					<button
 						disabled={item.status === 'backlog'}
 						onClick={() => ArrowClick('left')}

@@ -70,8 +70,11 @@ export const register = (user) => async (dispatch) => {
 			toast.error('registration failed');
 		}
 	} catch (error) {
-		console.log(error);
-		dispatch(registerFailure());
+		if (error.response) {
+			const errorMessage = error.response.data;
+			alert(errorMessage); 
+			dispatch(registerFailure());
+		}
 	}
 };
 
